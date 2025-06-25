@@ -263,6 +263,7 @@ img {
 /* Estilização dos cards */
 .about-container-item {
     display: flex;
+    will-change: transform;
     font-family: "Poppins", sans-serif;
     flex-direction: column;
     padding: 20px;
