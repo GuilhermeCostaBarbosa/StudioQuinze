@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>StudioQuinze</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="#Home">StudioQuinze</a>
+            </div>
+            <ul id="nav-itens">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">Sobre mim</a></li>
+                <li><a href="#Services">Serviços</a></li>
+                <li><a href="#Contact">Contato</a></li>
+            </ul>
+
+            <div class="mobile-nav-itens">
+                <button id="mobile-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+        <ul id="mobile-itens-list" >
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">Sobre mim</a></li>
+            <li><a href="#Services">Serviços</a></li>
+            <li><a href="#Contact">Contato</a></li>
+        </ul>
+
+        <div class="overlay-menu"></div>
+    </header>
+    <!-- Fim header -->
+
+    <main>
+    <!-- home -->
+        <section class="hero" id="Home">
+            <img src="images/home-img.png" alt="Imagem da professora de dança">
+
+            <div id="hero-description">
+                <h1>Letícia Ferrari</h1>
+                <h2>Transformando sonhos em<br>realidade através da<br><strong><span>dança</span></strong></h2>
+            </div>
+        </section>
+    <!-- fim home -->
+
+    <!-- Sobre mim -->
+        <section class="about-me" id="About">
+            <div>
+                <h1>SOBRE MIM</h1>
+            </div>
+
+            <div id="about-container">
+                <div class="about-container-item">
+                    <h3>PROFISSÃO</h3>
+                    <p>Coreógrafa especializada em festas de 15 anos</p>
+                </div>
+                <div class="about-container-item">
+                    <h3>EXPERIÊNCIA</h3>
+                    <p>7 anos como aluna de dança</p>
+                </div>
+                <div class="about-container-item">
+                    <h3>FORMAÇÃO</h3>
+                    <p>Curso de Instrutora FitDance</p>
+                </div>
+                <div class="about-container-item">
+                    <h3>PROPÓSITO</h3>
+                    <p>Tornar a dança um momento especial</p>
+                </div>
+            </div>
+        </section>
+    <!-- Fim Sobre mim -->
+
+    <!-- Serviços -->
+<section id="Services" class="services">
+  <h1>Serviços</h1>
+
+  <div id="services-container">
+
+    <div class="services-item">
+      <img src="images/undraw_playlist_lwhi.svg" alt="Imagem serviços">
+      <p>Coreografias personalizadas para cada debutante</p>
+    </div>
+
+    <div class="services-item reverse">
+      <img src="images/undraw_dua-lipa_bc8o.svg" alt="Imagem serviços">
+      <p>Ensaios no conforto da sua casa, com horários flexíveis</p>
+    </div>
+
+    <div class="services-item">
+      <img src="images/undraw_audio-player_7uwh.svg" alt="Imagem serviços">
+      <p>Orientação para escolha de músicas e estilo da dança</p>
+    </div>
+
+    <div class="services-item reverse">
+      <img src="images/undraw_super-woman_6nx2.svg" alt="Imagem serviços">
+      <p>Suporte total durante todo o processo, para que você se sinta segura, confiante e preparada para brilhar no seu grande dia</p>
+    </div>
+
+  </div>
+</section>
+    <!-- Fim Serviços -->
+
+    <!-- Contato -->
+     <section class="contact-container" id="Contact">
+        <div id="contact-infos">
+            <h2>Entre em contato</h2>
+            <p>Mande sua mensagem e comece<br>a planejar sua dança sem sair de<br>casa!</p>
+
+            <form id="contact-form">
+                <div id="form-container">
+                    <input type="text" name="name" id="name" placeholder="Nome:">
+                    <input type="tel" name="telefone" id="telefone" placeholder="Celular: (11) 91234-5678" maxlength="150">
+                    <input type="email" name="email" id="email" placeholder="E-mail:">
+                    <input type="text" name="subject" id="subject" placeholder="Assunto:">
+
+                    <textarea name="mensagem" id="mensagem" rows="6" cols="33" placeholder="Digite aqui sua mensagem:"></textarea>
+
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- fim Contato -->
+
+    <section id="channels">
+        <div id="channel-infos">
+            <div class="channel-info">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div class="channel-text">
+                    <h4>WhatsApp:</h4>
+                    <p>(15) 99610-2379</p>
+                </div>
+            </div>
+
+            <div class="channel-info">
+                <i class="fa-brands fa-instagram"></i>
+                <div class="channel-text">
+                    <h4>Instagram</h4>
+                    <p>_studioquinze</p>
+                </div>
+            </div>
+
+            <div class="channel-info">
+                <i class="fa-solid fa-envelope"></i>
+                <div class="channel-text">
+                    <h4>E-mail:</h4>
+                    <p>studioquinzedance@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <!-- <img src="images/undraw_personal-text_090t.svg"> -->
+    </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
