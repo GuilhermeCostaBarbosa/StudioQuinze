@@ -111,12 +111,13 @@
             <h2>Entre em contato</h2>
             <p>Mande sua mensagem e comece<br>a planejar sua dança sem sair de<br>casa!</p>
 
-            <form id="contact-form">
+            <form id="contact-form" action="https://formsubmit.co/studioquinzedance@gmail.com" method="POST">
                 <div id="form-container">
-                    <input type="text" name="name" id="name" placeholder="Nome:">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="nome" id="name" placeholder="Nome:">
                     <input type="tel" name="telefone" id="telefone" placeholder="Celular: (11) 91234-5678" maxlength="150">
                     <input type="email" name="email" id="email" placeholder="E-mail:">
-                    <input type="text" name="subject" id="subject" placeholder="Assunto:">
+                    <input type="text" name="assunto" id="subject" placeholder="Assunto:">
 
                     <textarea name="mensagem" id="mensagem" rows="6" cols="33" placeholder="Digite aqui sua mensagem:"></textarea>
 
