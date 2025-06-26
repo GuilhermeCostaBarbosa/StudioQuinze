@@ -114,12 +114,13 @@
             <form id="contact-form" action="https://formsubmit.co/studioquinzedance@gmail.com" method="POST">
                 <div id="form-container">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="text" name="nome" id="name" placeholder="Nome:">
-                    <input type="tel" name="telefone" id="telefone" placeholder="Celular: (11) 91234-5678" maxlength="150">
-                    <input type="email" name="email" id="email" placeholder="E-mail:">
-                    <input type="text" name="assunto" id="subject" placeholder="Assunto:">
+                    <input type="hidden" name="_next" value="https://studioquinze.netlify.app/obrigado.html">
+                    <input type="text" name="nome" id="name" placeholder="Nome:" required>
+                    <input type="tel" name="telefone" id="telefone" placeholder="Celular: (11) 91234-5678" maxlength="150" required>
+                    <input type="email" name="email" id="email" placeholder="E-mail:" required>
+                    <input type="text" name="assunto" id="subject" placeholder="Assunto:" required>
 
-                    <textarea name="mensagem" id="mensagem" rows="6" cols="33" placeholder="Digite aqui sua mensagem:"></textarea>
+                    <textarea name="mensagem" id="mensagem" rows="6" cols="33" placeholder="Digite aqui sua mensagem:" required></textarea>
 
                     <button type="submit">Enviar</button>
                 </div>
