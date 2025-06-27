@@ -15,36 +15,49 @@ document.body.addEventListener('click', (event) => {
     document.querySelector('.overlay-menu').style.display = 'none'
 })
 
+function showToast(message) {
+  const toast = document.getElementById('toast')
+  toast.textContent = message
+  toast.classList.add('show')
 
-document.querySelector('#contact-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
+  setTimeout(() => {
+    toast.classList.remove('show')
+  }, 4000) // esconde depois de 4 segundos
+}
 
-  const formData = {
-    name: document.querySelector('#name').value,
-    telefone: document.querySelector('#telefone').value,
-    email: document.querySelector('#email').value,
-    subject: document.querySelector('#subject').value,
-    mensagem: document.querySelector('#mensagem').value,
-  };
 
-  try {
-    const response = await fetch('http://localhost:3000/enviar', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    });
+const form = document.getElementById('contact-form')
 
-    const data = await response.json();
+form.addEventListener('submit', async (e) => {
+    e.preventDefault()
 
-    if (response.ok) {
-      alert('Mensagem enviada com sucesso!');
-    } else {
-      alert('Erro ao enviar: ' + data.error);
+    // Pegar os dados do formulario
+    const formData = new FormData(form)
+
+    // Converter em objeto
+    const data = {
+        nome: formData.get('nome'),
+        tel: formData.get('telefone'),
+        email: formData.get('email'),
+        assunto: formData.get('assunto'),
+        mensagem: formData.get('mensagem')
     }
-  } catch (error) {
-    console.error(error);
-    alert('Erro ao enviar a mensagem.');
-  }
-});
+
+    // Enviar para o backend
+    try {
+        const response = await fetch('.netlify/functions/sendEmail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data),
+        })
+
+        const result = await response.json()
+        showToast(result.message || 'Mensagem enviada com sucesso!')
+    } catch (error){
+        showToast(`Erro ao enviar o formulário: ${error}`)
+    }
+})
+
+
