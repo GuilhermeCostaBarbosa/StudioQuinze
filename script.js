@@ -45,7 +45,7 @@ form.addEventListener('submit', async (e) => {
 
     // Enviar para o backend
     try {
-        const response = await fetch('.netlify/functions/sendEmail', {
+        const response = await fetch('.netlify/functions/server', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
