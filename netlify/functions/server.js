@@ -17,7 +17,7 @@ exports.handler = async (event) => {
 
   const mailOptions = {
     from: email,
-    to: 'costabarbosag2@gmail.com, studioquinzedance@gmail.com',
+    to: 'gtechstudioweb@gmail.com, studioquinzedance@gmail.com',
     subject: assunto,
     html: `
       <div style="font-family: Arial, sans-serif; font-size: 16px;">
