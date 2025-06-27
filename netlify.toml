@@ -1,0 +1,3 @@
+[build]
+  publish = "./" # ou "public", se sua index.html estiver em "public"
+  functions = "netlify/functions"
