@@ -519,7 +519,11 @@ img {
         width: 50%;
         flex-direction: column;
         gap: 20px;
-}
+    }
+    
+    div > .channel-info:last-child p {
+        font-size: 12px;
+    }
 }
 
 .toast {
